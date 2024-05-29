@@ -1,0 +1,126 @@
+{
+    "application.shellEnvironmentResolutionTimeout": 60,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "breadcrumbs.enabled": false,
+    "editor.accessibilitySupport": "off",
+    // "editor.cursorStyle": "block",
+    // "editor.cursorBlinking": "solid",
+    "editor.emptySelectionClipboard": false,
+    "editor.quickSuggestions": {
+        "other": "off",
+        "comments": "off",
+        "strings": "off"
+    },
+    // "editor.quickSuggestionsDelay": 0,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "always",
+        "source.sortImports": "always",
+    },
+    "editor.codeLens": false,
+    "editor.smoothScrolling": true,
+    "editor.fontFamily": "'JetBrains Mono'",
+    "editor.lineHeight": 0, // 1.2
+    "editor.fontSize": 14,
+    "editor.fontWeight": 400,
+    "editor.fontLigatures": true,
+    "editor.fontVariations": true,
+    "editor.renderControlCharacters": false,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    "editor.minimap.enabled": false,
+    "editor.linkedEditing": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.tabCompletion": "on",
+    "editor.occurrencesHighlight": "off",
+    "editor.rulers": [
+        80
+    ],
+    "editor.scrollBeyondLastLine": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.selectionHighlight": false,
+    "editor.suggestOnTriggerCharacters": false,
+    "emmet.includeLanguages": {
+        "blade.php": "html",
+        "vue": "html"
+    },
+    "explorer.compactFolders": false,
+    "explorer.openEditors.visible": 0,
+    "extensions.ignoreRecommendations": true,
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        ".env*": "dotenv",
+        "blade.php": "html"
+    },
+    "files.autoSave": "onFocusChange",
+    "files.exclude": {
+        // "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "git.openRepositoryInParentFolders": "never",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "php.suggest.basic": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "telemetry.telemetryLevel": "off",
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.2,
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.external.linuxExec": "alacritty",
+    // "window.commandCenter": false,
+    "window.menuBarVisibility": "compact", //toggle
+    "window.titleBarStyle": "custom",
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Monokai Pro",
+    "workbench.editor.enablePreview": false,
+    // "workbench.editor.showTabs": "none",
+    "workbench.statusBar.visible": false,
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.settings.editor": "json",
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.tree.indent": 24,
+    "workbench.sideBar.location": "right",
+    "zenMode.fullScreen": false,
+    "[blade]": {
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+    },
+    "[css][html][javascript][scss][typescript][vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json][jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[php]": {
+        "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+    },
+    "apc.font.family": "JetBrains Mono",
+    "apc.listRow": {
+        "height": 24,
+        "fontSize": 12,
+    },
+    "cSpell.language": "en,pt_PT",
+    "cSpell.enabledLanguageIds": [
+        "*"
+    ],
+    "dotenv.enableAutocloaking": false,
+    "intelephense.telemetry.enabled": false,
+    "material-icon-theme.folders.theme": "classic",
+    "redhat.telemetry.enabled": false,
+}
