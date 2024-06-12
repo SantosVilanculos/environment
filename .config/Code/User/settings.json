@@ -20,7 +20,7 @@
     "editor.codeLens": false,
     "editor.smoothScrolling": true,
     "editor.fontFamily": "'JetBrains Mono'",
-    "editor.lineHeight": 0, // 1.2
+    "editor.lineHeight": 24, // 1.2
     "editor.fontSize": 14,
     "editor.fontWeight": 400,
     "editor.fontLigatures": true,
@@ -38,16 +38,16 @@
     },
     "editor.minimap.enabled": false,
     "editor.linkedEditing": true,
-    "editor.multiCursorModifier": "ctrlCmd",
+    // "editor.multiCursorModifier": "ctrlCmd",
     "editor.tabCompletion": "on",
     "editor.occurrencesHighlight": "off",
     "editor.rulers": [
-        80
+        120
     ],
     "editor.scrollBeyondLastLine": false,
     "editor.stickyScroll.enabled": false,
     "editor.selectionHighlight": false,
-    "editor.suggestOnTriggerCharacters": false,
+    // "editor.suggestOnTriggerCharacters": false,
     "emmet.includeLanguages": {
         "blade.php": "html",
         "vue": "html"
@@ -87,7 +87,7 @@
     "window.menuBarVisibility": "compact", //toggle
     "window.titleBarStyle": "custom",
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Monokai Pro",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
     "workbench.editor.enablePreview": false,
     // "workbench.editor.showTabs": "none",
     "workbench.statusBar.visible": false,
@@ -113,7 +113,7 @@
     "apc.font.family": "JetBrains Mono",
     "apc.listRow": {
         "height": 24,
-        "fontSize": 12,
+        "fontSize": 14,
     },
     "cSpell.language": "en,pt_PT",
     "cSpell.enabledLanguageIds": [
