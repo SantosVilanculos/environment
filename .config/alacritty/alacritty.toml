@@ -1,5 +1,5 @@
 import = [
-    "~/.config/alacritty/color_scheme/monokai_pro.toml",
+    "~/.config/alacritty/color_scheme/gruvbox_material_hard_dark.toml",
     "~/.config/alacritty/font_face/jetbrains_mono.toml",
 ]
 
@@ -14,7 +14,7 @@ args = ["-l", "-c", "tmux attach || tmux"]
 
 
 [window]
-decorations = "none"
+#decorations = "none"
 dynamic_padding = true
 padding.x = 4
 padding.y = 4
