@@ -3,15 +3,13 @@
     "diffEditor.ignoreTrimWhitespace": false,
     "breadcrumbs.enabled": false,
     "editor.accessibilitySupport": "off",
-    // "editor.cursorStyle": "block",
-    // "editor.cursorBlinking": "solid",
     "editor.emptySelectionClipboard": false,
     "editor.quickSuggestions": {
         "other": "off",
         "comments": "off",
         "strings": "off"
     },
-    // "editor.quickSuggestionsDelay": 0,
+    "editor.quickSuggestionsDelay": 0,
     "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
         "source.fixAll": "always",
@@ -38,7 +36,6 @@
     },
     "editor.minimap.enabled": false,
     "editor.linkedEditing": true,
-    // "editor.multiCursorModifier": "ctrlCmd",
     "editor.tabCompletion": "on",
     "editor.occurrencesHighlight": "off",
     "editor.rulers": [
@@ -60,7 +57,6 @@
         ".env*": "dotenv",
         "blade.php": "html"
     },
-    "files.autoSave": "onFocusChange",
     "files.exclude": {
         // "**/.git": true,
         "**/.svn": true,
@@ -83,13 +79,12 @@
     "terminal.integrated.defaultProfile.windows": "Git Bash",
     "terminal.integrated.defaultProfile.linux": "zsh",
     "terminal.external.linuxExec": "alacritty",
-    // "window.commandCenter": false,
-    "window.menuBarVisibility": "compact", //toggle
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "custom",
     "workbench.activityBar.location": "hidden",
     "workbench.colorTheme": "Gruvbox Dark Hard",
     "workbench.editor.enablePreview": false,
-    // "workbench.editor.showTabs": "none",
     "workbench.statusBar.visible": false,
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
@@ -101,7 +96,7 @@
     "[blade]": {
         "editor.defaultFormatter": "shufo.vscode-blade-formatter"
     },
-    "[css][html][javascript][scss][typescript][vue]": {
+    "[css][html][javascript][markdown][scss][typescript][vue]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json][jsonc]": {
@@ -119,6 +114,7 @@
     "cSpell.enabledLanguageIds": [
         "*"
     ],
+    "bladeFormatter.format.sortHtmlAttributes": "vuejs",
     "dotenv.enableAutocloaking": false,
     "intelephense.telemetry.enabled": false,
     "material-icon-theme.folders.theme": "classic",
