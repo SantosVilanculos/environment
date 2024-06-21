@@ -119,4 +119,5 @@
     "intelephense.telemetry.enabled": false,
     "material-icon-theme.folders.theme": "classic",
     "redhat.telemetry.enabled": false,
+    "intelephense.environment.documentRoot": "public/index.php"
 }
