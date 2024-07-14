@@ -1,9 +1,6 @@
 #!/usr/bin/bash
 
-cd "$(dirname -- "$0")"
-
-DIRECTORY="$(pwd)"
-
+DIRECTORY="$(realpath $(dirname -- "$0"))"
 
 ln -sf "$DIRECTORY/.zshrc" "$HOME/.zshrc"
 
@@ -20,5 +17,3 @@ ln -sf "$DIRECTORY/.config/i3" "$HOME/.config/i3"
 ln -sf "$DIRECTORY/.config/i3status" "$HOME/.config/i3status"
 
 ln -sf "$DIRECTORY/bin" "$HOME/bin"
-
-cd -
