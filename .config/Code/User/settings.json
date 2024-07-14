@@ -1,4 +1,15 @@
 {
+    "window.newWindowDimensions": "inherit",
+    "editor.snippetSuggestions": "top",
+    // Disable “Peek” Previews
+    "editor.gotoLocation.multipleReferences": "goto",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.gotoLocation.multipleDeclarations": "goto",
+    "editor.gotoLocation.multipleImplementations": "goto",
+    "editor.gotoLocation.multipleTypeDefinitions": "goto",
+    //GitHub-Style Inline Diffs
+    "diffEditor.renderSideBySide": false,
+    //
     "application.shellEnvironmentResolutionTimeout": 60,
     "diffEditor.ignoreTrimWhitespace": false,
     "breadcrumbs.enabled": false,
@@ -18,7 +29,7 @@
     "editor.codeLens": false,
     "editor.smoothScrolling": true,
     "editor.fontFamily": "'JetBrains Mono'",
-    "editor.lineHeight": 24, // 1.2
+    "editor.lineHeight": 32, // 24|1.2
     "editor.fontSize": 14,
     "editor.fontWeight": 400,
     "editor.fontLigatures": true,
@@ -44,18 +55,21 @@
     "editor.scrollBeyondLastLine": false,
     "editor.stickyScroll.enabled": false,
     "editor.selectionHighlight": false,
-    // "editor.suggestOnTriggerCharacters": false,
+    "editor.suggestOnTriggerCharacters": false,
+    "tailwindCSS.emmetCompletions": true,
+    "emmet.syntaxProfiles": {
+        "blade.php": "html",
+    },
     "emmet.includeLanguages": {
         "blade.php": "html",
         "vue": "html"
     },
+    "emmet.triggerExpansionOnTab": true,
     "explorer.compactFolders": false,
     "explorer.openEditors.visible": 0,
     "extensions.ignoreRecommendations": true,
     "files.associations": {
-        "*.embeddedhtml": "html",
-        ".env*": "dotenv",
-        "blade.php": "html"
+        ".env*": "dotenv"
     },
     "files.exclude": {
         // "**/.git": true,
@@ -83,18 +97,18 @@
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "custom",
     "workbench.activityBar.location": "hidden",
-    "workbench.colorTheme": "Gruvbox Dark Hard",
     "workbench.editor.enablePreview": false,
-    "workbench.statusBar.visible": false,
     "workbench.startupEditor": "none",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.settings.editor": "json",
     "workbench.tree.enableStickyScroll": false,
     "workbench.tree.indent": 24,
     "workbench.sideBar.location": "right",
+    "workbench.statusBar.visible": false,
     "zenMode.fullScreen": false,
     "[blade]": {
-        "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter",
+        "editor.autoClosingBrackets": "always"
     },
     "[css][html][javascript][markdown][scss][typescript][vue]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -114,10 +128,19 @@
     "cSpell.enabledLanguageIds": [
         "*"
     ],
+    "blade.format.enable": true,
     "bladeFormatter.format.sortHtmlAttributes": "vuejs",
     "dotenv.enableAutocloaking": false,
     "intelephense.telemetry.enabled": false,
     "material-icon-theme.folders.theme": "classic",
     "redhat.telemetry.enabled": false,
-    "intelephense.environment.documentRoot": "public/index.php"
+    "intelephense.environment.documentRoot": "public",
+    "namespaceResolver.sortOnSave": true,
+    "phpactor.path": "/usr/local/bin/phpactor",
+    "phpactor.launchServerArgs": [
+        "-q"
+    ],
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "window.confirmSaveUntitledWorkspace": false,
+    "laravel-pint.enable": true,
 }

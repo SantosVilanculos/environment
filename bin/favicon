@@ -1,34 +1,41 @@
 #!/usr/bin/bash
 
-convert "./favicon.png" -define icon:auto-resize="256,128,96,64,48,32,16" ./favicon.ico
+FILE="$1"
 
-convert "./favicon.png" -resize x16 "./favicon-16x16.png"
-convert "./favicon.png" -resize x32 "./favicon-32x32.png"
-convert "./favicon.png" -resize x96 "./favicon-96x96.png"
+if [[ ! -f $FILE ]]; then
+  echo "unable to open image"
+  exit
+fi
 
-convert "./favicon.png" -resize x36 "./android-icon-36x36.png"
-convert "./favicon.png" -resize x48 "./android-icon-48x48.png"
-convert "./favicon.png" -resize x72 "./android-icon-72x72.png"
-convert "./favicon.png" -resize x96 "./android-icon-96x96.png"
-convert "./favicon.png" -resize x144 "./android-icon-144x144.png"
-convert "./favicon.png" -resize x192 "./android-icon-192x192.png"
+convert $FILE -define icon:auto-resize="256,128,96,64,48,32,16" ./favicon.ico
 
-convert "./favicon.png" -resize x57 "./apple-icon-57x57.png"
-convert "./favicon.png" -resize x60 "./apple-icon-60x60.png"
-convert "./favicon.png" -resize x72 "./apple-icon-72x72.png"
-convert "./favicon.png" -resize x76 "./apple-icon-76x76.png"
-convert "./favicon.png" -resize x114 "./apple-icon-114x114.png"
-convert "./favicon.png" -resize x120 "./apple-icon-120x120.png"
-convert "./favicon.png" -resize x144 "./apple-icon-144x144.png"
-convert "./favicon.png" -resize x152 "./apple-icon-152x152.png"
-convert "./favicon.png" -resize x180 "./apple-icon-180x180.png"
-convert "./favicon.png" -resize x192 "./apple-icon-precomposed.png"
-convert "./favicon.png" -resize x192 "./apple-icon.png"
+convert $FILE -resize x16 "./favicon-16x16.png"
+convert $FILE -resize x32 "./favicon-32x32.png"
+convert $FILE -resize x96 "./favicon-96x96.png"
 
-convert "./favicon.png" -resize x70 "./ms-icon-70x70.png"
-convert "./favicon.png" -resize x144 "./ms-icon-144x144.png"
-convert "./favicon.png" -resize x150 "./ms-icon-150x150.png"
-convert "./favicon.png" -resize x310 "./ms-icon-310x310.png"
+convert $FILE -resize x36 "./android-icon-36x36.png"
+convert $FILE -resize x48 "./android-icon-48x48.png"
+convert $FILE -resize x72 "./android-icon-72x72.png"
+convert $FILE -resize x96 "./android-icon-96x96.png"
+convert $FILE -resize x144 "./android-icon-144x144.png"
+convert $FILE -resize x192 "./android-icon-192x192.png"
+
+convert $FILE -resize x57 "./apple-icon-57x57.png"
+convert $FILE -resize x60 "./apple-icon-60x60.png"
+convert $FILE -resize x72 "./apple-icon-72x72.png"
+convert $FILE -resize x76 "./apple-icon-76x76.png"
+convert $FILE -resize x114 "./apple-icon-114x114.png"
+convert $FILE -resize x120 "./apple-icon-120x120.png"
+convert $FILE -resize x144 "./apple-icon-144x144.png"
+convert $FILE -resize x152 "./apple-icon-152x152.png"
+convert $FILE -resize x180 "./apple-icon-180x180.png"
+convert $FILE -resize x192 "./apple-icon-precomposed.png"
+convert $FILE -resize x192 "./apple-icon.png"
+
+convert $FILE -resize x70 "./ms-icon-70x70.png"
+convert $FILE -resize x144 "./ms-icon-144x144.png"
+convert $FILE -resize x150 "./ms-icon-150x150.png"
+convert $FILE -resize x310 "./ms-icon-310x310.png"
 
 cat <<EOF >"./favicon.html"
 <!DOCTYPE html>

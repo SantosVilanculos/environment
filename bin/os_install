@@ -1,0 +1,33 @@
+#!/usr/bin/bash
+
+sudo dpkg --add-architecture i386
+
+sudo apt-get install zsh
+sudo -s $(which zsh)
+
+sudo apt-get install -yq git gh
+
+sudo apt-get install -yq build-essential cmake make
+
+sudo apt-get install -yq tar zip unzip
+
+sudo apt-get install -yq curl wget
+
+sudo apt-get install -yq ffmpeg vlc
+
+sudo apt-get install -yq htop net-tools
+
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+sudo apt-get update
+sudo apt install -yq fastfetch
+
+sudo apt-get install -yq java-common
+
+sudo apt-get install -yq chrome-gnome-shell
+
+sudo apt-get i3 dmenu nitrogen
+
+sudo apt-get install -yq xsel
+
+#https://extensions.gnome.org/extension/1319/gsconnect/
+#https://extensions.gnome.org/extension/307/dash-to-dock/
