@@ -105,13 +105,9 @@ alias pbpaste='xsel --output --clipboard'
 
 alias vim="nvim"
 
-alias gwip="git add . && git commit -m \"wip\""
-alias glog="git log --oneline --graph --max-count=32"
-alias gunstage="git restore --staged"
-alias gundo="git reset --soft HEAD~"
+alias wip="git add . && git commit -m \"wip\""
 
-alias tinker='php artisan tinker'
-alias a='php artisan'
+alias pa='php artisan'
 
 # https://getcomposer.org/doc/00-intro.md
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"

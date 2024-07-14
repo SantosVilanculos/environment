@@ -5,3 +5,9 @@
 	email = 95357132+SantosVilanculos@users.noreply.github.com
 [init]
 	defaultBranch = main
+[alias]
+	cm = commit -m
+	untrack = commit --amend
+	unadd = restore --staged
+	log = log --oneline --graph --max-count=32
+	undo = reset --soft HEAD~
