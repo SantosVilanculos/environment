@@ -50,6 +50,7 @@
     "editor.tabCompletion": "on",
     "editor.occurrencesHighlight": "off",
     "editor.rulers": [
+        80,
         120
     ],
     "editor.scrollBeyondLastLine": false,
@@ -70,14 +71,6 @@
     "extensions.ignoreRecommendations": true,
     "files.associations": {
         ".env*": "dotenv"
-    },
-    "files.exclude": {
-        // "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -140,7 +133,12 @@
     "phpactor.launchServerArgs": [
         "-q"
     ],
+    "css.enabledLanguages": [
+        "blade",
+        "html",
+        "php"
+    ],
+    "typescript.suggest.paths": false,
+    "javascript.suggest.paths": false,
     "workbench.colorTheme": "One Dark Pro Darker",
-    "window.confirmSaveUntitledWorkspace": false,
-    "laravel-pint.enable": true,
 }
