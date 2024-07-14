@@ -107,6 +107,7 @@ alias vim="nvim"
 
 alias gwip="git add . && git commit -m \"wip\""
 alias glog="git log --oneline --graph --max-count=32"
+alias gunstage="git restore --staged"
 alias gundo="git reset --soft HEAD~"
 
 alias tinker='php artisan tinker'
