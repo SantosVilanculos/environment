@@ -3,7 +3,7 @@
 code --update-extensions
 
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 
 npm install -g npm@latest
 npm install -g pnpm@latest http-server@latest json-server@latest
