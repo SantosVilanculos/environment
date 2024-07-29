@@ -13,4 +13,4 @@ rm -rf "$HOME/.config/alacritty"
 rm -rf "$HOME/.config/i3"
 rm -rf "$HOME/.config/i3status"
 
-rm -rf "$HOME/bin"
+rm -rf "$HOME/.bin"

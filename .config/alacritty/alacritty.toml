@@ -1,6 +1,6 @@
 import = [
     "~/.config/alacritty/color_scheme/one_dark.toml",
-    "~/.config/alacritty/font_face/jetbrains_mono_nerd_font.toml",
+    "~/.config/alacritty/font_face/jetbrains_mono_nerd_font.toml"
 ]
 
 

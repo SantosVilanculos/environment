@@ -16,4 +16,4 @@ ln -nsf "$DIRECTORY/.config/alacritty" "$HOME/.config/alacritty"
 ln -nsf "$DIRECTORY/.config/i3" "$HOME/.config/i3"
 ln -nsf "$DIRECTORY/.config/i3status" "$HOME/.config/i3status"
 
-ln -nsf "$DIRECTORY/bin" "$HOME/bin"
+ln -nsf "$DIRECTORY/.bin" "$HOME/.bin"

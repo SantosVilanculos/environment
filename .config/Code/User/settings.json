@@ -8,7 +8,7 @@
     "editor.gotoLocation.multipleImplementations": "goto",
     "editor.gotoLocation.multipleTypeDefinitions": "goto",
     //GitHub-Style Inline Diffs
-    "diffEditor.renderSideBySide": false,
+    "diffEditor.renderSideBySide": true,
     //
     "application.shellEnvironmentResolutionTimeout": 60,
     "diffEditor.ignoreTrimWhitespace": false,
@@ -112,7 +112,7 @@
     "[php]": {
         "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
     },
-    "apc.font.family": "JetBrains Mono",
+    "apc.font.family": "GitLab Mono",
     "apc.listRow": {
         "height": 24,
         "fontSize": 14,
@@ -141,4 +141,5 @@
     "typescript.suggest.paths": false,
     "javascript.suggest.paths": false,
     "workbench.colorTheme": "One Dark Pro Darker",
+    // "phpactor.config": {}
 }

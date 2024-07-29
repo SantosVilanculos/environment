@@ -1,7 +1,20 @@
+export LANG=en_US.UTF-8
 export TERM="xterm-256color"
+export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 
-# If you come from bash you might have to change your $PATH.
-export PATH="$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH"
+# ---
+
+if [ -d "$HOME/.bin" ]; then
+    PATH="$HOME/.bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
+if [ -d "/var/lib/flatpak/exports/bin/" ]; then
+    PATH="/var/lib/flatpak/exports/bin/:$PATH"
+fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -72,41 +85,35 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(sudo git zsh-autosuggestions zsh-syntax-highlighting laravel)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting sudo git laravel)
 fpath+=${ZSH_CUSTOM:-${ZSH:-$HOME/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# ---
+alias clean='sudo apt autoremove; sudo apt autoclean; sudo apt clean'
+alias setkb="setxkbmap -option 'grp:alt_shift_toggle' -layout 'us,us' -variant ',alt-intl'"
 
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
+# ---
+alias ls='eza -al --color=always --group-directories-first'
+alias la='eza -a --color=always --group-directories-first'
+alias ll='eza -l --color=always --group-directories-first'
+alias lt='eza -aT --color=always --group-directories-first'
+alias l.='eza -al --color=always --group-directories-first ./../'
+alias l..='eza -al --color=always --group-directories-first ./../../'
+alias l...='eza -al --color=always --group-directories-first ./../../../'
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='nano'
-else
-    export EDITOR='code'
-fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
+# ---
 alias pbcopy='xsel --input --clipboard'
 alias pbpaste='xsel --output --clipboard'
 
+# ---
 alias vim="nvim"
 
+# ---
 alias wip="git add . && git commit -m \"wip\""
-
 alias pa='php artisan'
 
 # https://getcomposer.org/doc/00-intro.md
@@ -118,8 +125,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # https://pnpm.io/installation
+# pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
 *":$PNPM_HOME:"*) ;;
 *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
+# pnpm end
