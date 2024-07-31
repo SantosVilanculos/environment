@@ -1,28 +1,14 @@
-export LANG=en_US.UTF-8
-export TERM="xterm-256color"
-export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# ---
-
-if [ -d "$HOME/.bin" ]; then
-    PATH="$HOME/.bin:$PATH"
-fi
-
-if [ -d "$HOME/.local/bin" ]; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-
-if [ -d "/var/lib/flatpak/exports/bin/" ]; then
-    PATH="/var/lib/flatpak/exports/bin/:$PATH"
-fi
-
-# Path to your oh-my-zsh installation.
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
 ZSH_THEME="spaceship"
 
 # Set list of themes to pick from when loading at random
@@ -85,50 +71,58 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting sudo git laravel)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting sudo git)
 fpath+=${ZSH_CUSTOM:-${ZSH:-$HOME/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-# ---
-alias clean='sudo apt autoremove; sudo apt autoclean; sudo apt clean'
-alias setkb="setxkbmap -option 'grp:alt_shift_toggle' -layout 'us,us' -variant ',alt-intl'"
+# export MANPATH="/usr/local/man:$MANPATH"
 
-# ---
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch $(uname -m)"
+
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+export TERM="xterm-256color"
+
+alias pbcopy='xsel --input --clipboard'
+alias pbpaste='xsel --output --clipboard'
+
 alias ls='eza -al --color=always --group-directories-first'
 alias la='eza -a --color=always --group-directories-first'
 alias ll='eza -l --color=always --group-directories-first'
 alias lt='eza -aT --color=always --group-directories-first'
-alias l.='eza -al --color=always --group-directories-first ./../'
-alias l..='eza -al --color=always --group-directories-first ./../../'
-alias l...='eza -al --color=always --group-directories-first ./../../../'
 
-# ---
-alias pbcopy='xsel --input --clipboard'
-alias pbpaste='xsel --output --clipboard'
-
-# ---
-alias vim="nvim"
-
-# ---
-alias wip="git add . && git commit -m \"wip\""
-alias pa='php artisan'
-
-# https://getcomposer.org/doc/00-intro.md
-export PATH="$PATH:$HOME/.config/composer/vendor/bin"
-
-# https://github.com/nvm-sh/nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# https://pnpm.io/installation
-# pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
 *":$PNPM_HOME:"*) ;;
 *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
+
+export PATH="$PATH:$HOME/.config/composer/vendor/bin"
